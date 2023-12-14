@@ -1,0 +1,2 @@
+db_user: mern_user
+db_password: RGlLwbpZ3FLl556v
