@@ -1,8 +1,28 @@
-# React + Vite
+# Music Detect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Propuesta de proyecto.
 
-Currently, two official plugins are available:
+Reproductor multimedia Web que muestra recomendaciones personalizadas 
+en función del estado de ánimo del usuario. 
+(El usuario define cómo se siente).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Especificación del proyecto:
+- Inicio de sesión
+- Carga de canciones local/remoto
+- Funciones básicas de un reproductor: Sig, Prev, Play, Pausa, Volumen, Búsqueda de canciones.
+- Recomendación de canciones (aceptar recomendación, generar una nueva).
+
+Tecnologías de desarrollo (MERN Stack)
+- React, JS
+- IA: TensorFlow (tentativa)
+- BD: Mongo
+
+# Music Detect v1.0.0
+
+Reproductor multimedia web el cual como se menciona en las especificaciones
+sus funciones basicas son las de: Sig, Prev, Play, Pausa, Volumen, Búsqueda de canciones.
+![Player Multimedia](src/img/github/github-image1.png)
+
+Al realizar alguna busqueda de alguna cancion, no se necesita escribir todo el nombre
+simplemente con que incluya dichas letras muestra los posibles resultados.
+![Search song](src/img/github/github-image2.png)
