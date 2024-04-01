@@ -7,7 +7,7 @@ export const colors = {
     searchBackground: "#808080",
     searchText: "#ffffff",
     // searchPlaceHolder: "#575a77",
-    searchPlaceHolder: "#f1f1f1",
+    searchPlaceHolder: "#f1f1f2",
     playerBackground: "#18191f",
     titleColor: "#ffffff",
     timeColor: "#ffffff",
