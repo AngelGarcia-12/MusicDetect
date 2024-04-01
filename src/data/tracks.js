@@ -6,9 +6,13 @@ export const tracks = [
         tags: ["house"],
     },
     {
-        url: "src/data/OneRepublic - Counting Stars.mp3",
+        url: "src/data/music/OneRepublic - Counting Stars.mp3",
         title: "OneRepublic - Counting Stars",
         tags: ["star"],
     },
-
+    {
+        url: "src/data/music/John Newman - Love Me Again.mp3",
+        title: "John Newman - Love Me Again",
+        tags: ["active"],
+    },
 ]
