@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const calendarSlice = createSlice({
-    name: 'calendar',
+export const mdSlice = createSlice({
+    name: 'md',
     initialState: {
         isLoadingEvents: true,
         events: [
@@ -58,4 +58,4 @@ export const {
     onUpdateEvent,
     onDeleteEvent,
     onLogoutCalendar,
-    onLoadEvents, } = calendarSlice.actions;
+    onLoadEvents, } = mdSlice.actions;
