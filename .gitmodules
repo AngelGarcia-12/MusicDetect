@@ -1,0 +1,3 @@
+[submodule "MusicDetect-backend"]
+	path = MusicDetect-backend
+	url = https://github.com/AngelGarcia-12/MusicDetect.git
