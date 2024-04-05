@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { clearErrorMessage, onChecking, onLogin, onLogout } from "../store/auth/authSlice";
+import { mdApi } from "../api";
 
 export const useAuthStore = () => {
     const {status, user, errorMessage} = useSelector(state => state.auth);
@@ -14,11 +15,11 @@ export const useAuthStore = () => {
 
         // Llegar al backend
         try {
-            // const {data} = await calendarApi.post('/auth', {email, password});
-            // localStorage.setItem('token', data.token);
-            // localStorage.setItem('token-init-date', new Date().getTime());
+            const {data} = await mdApi.post('/auth', {email, password});
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('token-init-date', new Date().getTime());
             dispatch( onLogin({name: data.name, uid: data.uid}) );
-            console.log("Se mando info al backend, Login")
+            // console.log("Se mando info al backend, Login")
         } catch (error) {
             dispatch( onLogout('Credenciales incorrectas') );
             setTimeout(() => {
@@ -32,11 +33,11 @@ export const useAuthStore = () => {
 
         // Llegar al backend
         try {
-            // const {data} = await calendarApi.post('/auth/new', {email, password, name});
-            // localStorage.setItem('token', data.token);
-            // localStorage.setItem('token-init-date', new Date().getTime());
-            // dispatch( onLogin({name: data.name, uid: data.uid}) );
-            console.log("Se mando info al backend, Register");
+            const {data} = await mdApi.post('/auth/new', {email, password, name});
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('token-init-date', new Date().getTime());
+            dispatch( onLogin({name: data.name, uid: data.uid}) );
+            // console.log("Se mando info al backend, Register");
         } catch (error) {
             dispatch( onLogout(error.response.data?.msg || '--') );
             setTimeout(() => {
@@ -50,11 +51,11 @@ export const useAuthStore = () => {
         if(!token) return dispatch( onLogout() );
 
         try {
-            // const {data} = await calendarApi.get('auth/renew');
-            // localStorage.setItem('token', data.token);
-            // localStorage.setItem('token-init-date', new Date().getTime());
-            // dispatch( onLogin({name: data.name, uid: data.uid}) );
-            console.log("Se mando info al backend, CheckAuth")
+            const {data} = await mdApi.get('auth/renew');
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('token-init-date', new Date().getTime());
+            dispatch( onLogin({name: data.name, uid: data.uid}) );
+            // console.log("Se mando info al backend, CheckAuth")
         } catch (error) {
             localStorage.clear();
             dispatch( onLogout() );
