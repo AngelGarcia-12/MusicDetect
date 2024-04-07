@@ -4,8 +4,13 @@ import reactLogo from '../../assets/react.svg';
 import './AudioPlayer.css';
 import { tracks } from "../../data/tracks";
 import { colors } from "../../helpers";
+import { useClasification } from "../../hooks/useClasification";
 
 export const AudioPlayer = () => {
+  const model = useClasification();
+
+  console.log(model);
+
   return (
     <>
       <div id='rootAudioPlayer'>

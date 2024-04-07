@@ -6,9 +6,8 @@ import { NavBar } from "../components/NavBar";
 export const MusicDetectPage = () => {
   const {user} = useAuthStore();
   const {openDateModal} = useUiStore();
-  const [lastView, setLastView] = useState(localStorage.getItem('lastView') || 'week');
 
-  const eventStyleGetter = (event, start, end, isSelected) => {
+  const eventStyleGetter = (event) => {
     const isMyEvent = (user.uid === event.user._id) || (user.uid === event.user.uid);
 
     const style = {
