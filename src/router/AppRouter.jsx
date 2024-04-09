@@ -14,7 +14,7 @@ export const AppRouter = () => {
     
     if(status === 'checking'){
       return (
-        <h3>Cargando...</h3>
+        <h3 style={{color: "white"}}>Cargando...</h3>
       )
     }
 

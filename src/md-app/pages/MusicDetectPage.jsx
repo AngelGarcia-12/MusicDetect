@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { useUiStore, useAuthStore } from "../../hooks"
+import { useUiStore, useAuthStore, useMDStore } from "../../hooks"
 import { AudioPlayer } from "../components/AudioPlayer";
 import { NavBar } from "../components/NavBar";
 
 export const MusicDetectPage = () => {
   const {user} = useAuthStore();
-  const {openDateModal} = useUiStore();
+  const {events, setActiveEvent, startLoadingEvents} = useMDStore();
 
   const eventStyleGetter = (event) => {
     const isMyEvent = (user.uid === event.user._id) || (user.uid === event.user.uid);
@@ -25,17 +25,17 @@ export const MusicDetectPage = () => {
   // const onDoubleClick = (event) => {
   //   openDateModal();
   // }
-  // const onSelect = (event) => {
-  //   setActiveEvent(event);
-  // }
+  const onSelect = (event) => {
+    setActiveEvent(event);
+  }
   // const onViewChanged = (event) => {
   //   localStorage.setItem('lastView', event);
   //   setLastView(event);
   // }
 
-  // useEffect(() => {
-  //   startLoadingEvents();
-  // }, [])
+  useEffect(() => {
+    startLoadingEvents();
+  }, [])
   
 
   return (

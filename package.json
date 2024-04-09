@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-backend": "nodemon MusicDetect-backend/index.js",
+    "devbd": "concurrently \"yarn dev\" \"yarn dev-backend\"",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
