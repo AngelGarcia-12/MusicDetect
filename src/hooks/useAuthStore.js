@@ -55,7 +55,7 @@ export const useAuthStore = () => {
             localStorage.setItem('token', data.token);
             localStorage.setItem('token-init-date', new Date().getTime());
             dispatch( onLogin({name: data.name, uid: data.uid}) );
-            console.log("Se mando info al backend, CheckAuth")
+            // console.log("Se mando info al backend, CheckAuth")
         } catch (error) {
             localStorage.clear();
             dispatch( onLogout() );
