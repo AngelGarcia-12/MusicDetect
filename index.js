@@ -2,6 +2,9 @@ const express = require('express');
 require('dotenv').config();
 const { dbConnection } = require('./database/config');
 const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
+const mediaserver = require('mediaserver');
 
 // Crear el servidor de express
 const app = express();
@@ -22,8 +25,22 @@ app.use( express.json() );
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 // TODO: CRUD: Eventos
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile( __dirname + '/public/index.html');
+})
+
+app.get('/events', (req, res) => {
+    fs.readFile(path.join(__dirname, '/data/tracks.json'), (err, tracks) => {
+        if(err) throw err;
+        res.json(JSON.parse(tracks));
+        console.log(tracks);
+    });
+})
+
+app.get('/events/:name', (req, res) => {
+    const track = __dirname + '/data/music/' + req.params.name;
+    // console.log(req.params.name);
+    mediaserver.pipe(req, res, track);
 })
 
 // Escuchar peticiones

@@ -1,16 +1,20 @@
 const {Schema, model} = require('mongoose');
 
 const EventoSchema = Schema({
+    name: {
+        type: String,
+        required: true,
+    },
     url: {
         type: String,
-        required: true
+        required: false,
     },
     title: {
         type: String,
         required: true,
     },
     tags: {
-        type: String,
+        type: Array,
         required: false
     },
     user: {
