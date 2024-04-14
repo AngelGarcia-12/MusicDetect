@@ -15,7 +15,7 @@ export const mdSlice = createSlice({
         },
         onAddNewEvent: (state, {payload}) => {
             state.events.push(payload);
-            state.activeEvent = null;
+            state.activeEvent = true;
         },
         onUpdateEvent: (state, {payload}) => {
             state.events = state.events.map(event => {

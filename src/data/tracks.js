@@ -1,5 +1,4 @@
 export const tracks = [
-    // Music
     {
         url: "https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3",
         title: "Madza - Chords of Life",
@@ -60,4 +59,68 @@ export const tracks = [
         name: "See You Again",
         tags: ["sad"],
     },
-]
+];
+
+//   const tracksServer = [
+//     // Music
+//     {
+//         url: "https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3",
+//         title: "Madza - Chords of Life",
+//         name: "Chords of Life",
+//         tags: ["excited"],
+//     },
+//     {
+//         url: events[1].url,
+//         title: events[1].title,
+//         name: events[1].name,
+//         tags: events[1].tags,
+//     },
+//     {
+//         url: events[2].url,
+//         title: events[2].title,
+//         name: events[2].name,
+//         tags: events[2].tags,
+//     },
+//     {
+//         url: events[3].url,
+//         title: events[3].title,
+//         name: events[3].name,
+//         tags: events[3].tags,
+//     },
+//     {
+//         url: events[4].url,
+//         title: events[4].title,
+//         name: events[4].name,
+//         tags: events[4].tags,
+//     },
+//     {
+//         url: events[5].url,
+//         title: events[5].title,
+//         name: events[5].name,
+//         tags: events[5].tags,
+//     },
+//     {
+//         url: events[6].url,
+//         title: events[6].title,
+//         name: events[6].name,
+//         tags: events[6].tags,
+//     },
+//     {
+//         url: events[7].url,
+//         title: events[7].title,
+//         name: events[7].name,
+//         tags: events[7].tags,
+//     },
+//     {
+//         url: events[8].url,
+//         title: events[8].title,
+//         name: events[8].name,
+//         tags: events[8].tags,
+//     },
+//     {
+//         url: events[9].url,
+//         title: events[9].title,
+//         name: events[9].name,
+//         tags: events[9].tags,
+//     },
+// ]

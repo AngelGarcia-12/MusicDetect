@@ -46,6 +46,7 @@ export const useMDStore = () => {
             const {data} = await mdApi.get('/events');
             const events = data.eventos;
             dispatch( onLoadEvents(events) );
+
         } catch (error) {
             console.log('Error cargando eventos');
             console.log(error);

@@ -1,27 +1,30 @@
 import { tracks } from "../data/tracks"
+import { useMDStore } from "./useMDStore";
 
 export const useEmotion = () => {
 
+    const { events } = useMDStore();
+
     const getHappy = () => {
-        const emotion = tracks.filter(track => track.tags == 'happy');
+        const emotion = events.filter(event => event.tags == 'happy');
 
         return emotion;
     }
 
     const getSad = () => {
-        const emotion = tracks.filter(track => track.tags == 'sad');
+        const emotion = events.filter(event => event.tags == 'sad');
 
         return emotion;
     }
 
     const getExcited = () => {
-        const emotion = tracks.filter(track => track.tags == 'excited');
+        const emotion = events.filter(event => event.tags == 'excited');
 
         return emotion;
     }
 
     const getSurprised = () => {
-        const emotion = tracks.filter(track => track.tags == 'surprised');
+        const emotion = events.filter(event => event.tags == 'surprised');
 
         return emotion;
     }
