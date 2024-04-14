@@ -27,6 +27,36 @@ Al realizar alguna busqueda de alguna cancion, no se necesita escribir todo el n
 simplemente con que incluya dichas letras muestra los posibles resultados.
 ![Search song](src/img/github/github-image2.png)
 
+# Music Detect v1.0.3
+## Inicio de sesion
+El proyecto cuenta con una ventana login al cargar la aplicacion, hay dos columnas
+una de inicio de sesion y la otra de registro en caso de no tener una cuenta.
+![Login page](src/img/github/github-image3.png)
+
+Esta esta conectada a una base de datos en MongoDB la cual guarda los usuarios que se 
+registran y la cual encripta su contraseña por seguridad en la base de datos, una vez
+esta registrado un usuario al momento de hacer el login este busca en el backend la
+informacion y si es correcta le da acceso al usuario del reproductor.
+![Data loginpage](src/img/github/github-image4.png)
+
+No cuenta con validacion de contraseñas sin embargo es algo que se puede agregar a futuro
+en el proyecto, pero vemos que el login funciona, claro si el backend no esta activo, no 
+se podra acceder al reproductor.
+Ai ingresar vemos que en el navbar tenemos el nombre del usuario y un boton para salir de
+la sesion, asi como el reproductor.
+![Accesing page](src/img/github/github-image5.png)
+
+## Reproductor de emociones
+En el reproductor podemos observar unos iconos, los cuales serviran como botones y en base 
+a la emocion que sientas este te recomendara canciones, este tiene una clasificacion de texto
+en la cual dependiendo de esa emocion te mostrara canciones que pudieran transmitirte esa
+emocion. Por el momento solo se manejo 3 tipos de emociones, feliz, triste y emocionado.
+En un inicio se cargaran la lista de canciones que se tienen guardadas.
+![Songs List](src/img/github/github-image6.png)
+
+Si presionamos alguna de las emociones. Obtenemos una lista de posibles canciones que transmiten
+ese sentimiento. Las canciones contienen una etiqueta la cual es la emocion posible.
+![Happy Songs](src/img/github/github-image7.png)
 
 ## Desplegar el proyecto
 

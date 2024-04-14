@@ -1,3 +1,17 @@
+.login-header {
+    color: white;
+    text-align: center;
+}
+
+.name-app {
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.name-app:hover {
+    filter: drop-shadow(0 0 2em #cdcacfaa);
+}
+
 .login-container{
     margin-top: 15%;
 }
